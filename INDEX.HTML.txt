@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Travels & Digital Services</title>
+    <!-- Tailwind CSS CDN for modern grid layouts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- SVG Logo -->
+                <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l92-7-9-7-9 7v7m0-13a5 5 0 11-10 0 5 5 0 0110 0z"></path>
+                </svg>
+                <span class="text-2xl font-bold tracking-wider text-yellow-400">PIYUSH TRAVELS</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="#home" class="hover:text-yellow-400 transition">मुख्य पृष्ठ (Home)</a>
+                <a href="#services" class="hover:text-yellow-400 transition">हमारी सेवाएं (Services)</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">संपर्क करें (Contact)</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 px-4 py-3 space-y-2">
+            <a href="#home" class="block hover:text-yellow-400 py-1">मुख्य पृष्ठ (Home)</a>
+            <a href="#services" class="block hover:text-yellow-400 py-1">हमारी सेवाएं (Services)</a>
+            <a href="#contact" class="block hover:text-yellow-400 py-1">संपर्क करें (Contact)</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r cubic-bezier from-blue-900 to-indigo-800 text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+                <!-- Hero Left: Text Content -->
+                <div>
+                    <span class="bg-yellow-400 text-blue-900 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm uppercase tracking-wider">ऑनलाइन सेवा केंद्र & ट्रेवल्स</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold mt-4 tracking-tight">पीयूष ट्रेवल्स एवं डिजिटल सर्विसेज</h1>
+                    <p class="text-lg md:text-xl text-blue-100 mt-4 max-w-2xl">आय, जाति, निवास प्रमाण पत्र, पासपोर्ट, राशन कार्ड, mobile रिचार्ज और सभी प्रकार के ऑनलाइन फॉर्म्स के लिए भरोसेमंद स्थान।</p>
+                    <p class="text-base md:text-lg text-yellow-400 font-medium mt-3 tracking-wide">संचालक (Operator): वसीम राजा</p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                        <a href="#services" class="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-3 rounded-lg shadow-lg text-center transition">सेवाएं देखें</a>
+                        <a href="https://wa.me" target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3 rounded-lg shadow-lg text-center flex items-center justify-center gap-2 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.845-4.394 9.848-9.793.002-2.616-1.012-5.074-2.857-6.92C17.164 2.047 14.712.984 12.01.984c-5.433 0-9.85 4.394-9.853 9.793a9.697 9.697 0 0 0 1.472 5.068L2.64 21.36l5.732-1.503l.275.163z"/></svg>
+                            WhatsApp पर बात करें
+                        </a>
+                    </div>
+                </div>
+                <!-- Hero Right: Operator Photo Frame (Optimized standard asset url) -->
+                <div class="flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                        <img class="relative rounded-full w-64 h-64 md:w-72 md:h-72 object-cover object-top border-4 border-blue-900 shadow-2xl bg-slate-800" 
+                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500" 
+                             alt="Wasim Raja Operator">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Banner -->
+    <section class="bg-yellow-400 py-4 shadow-inner text-blue-900 font-semibold overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-wrap justify-around items-center text-center gap-4 text-sm md:text-base">
+            <div class="flex items-center gap-2">⏱️ तेज़ और सुरक्षित सर्विस</div>
+            <div class="flex items-center gap-2">💎 किफ़ायती और सही दाम</div>
+            <div class="flex items-center gap-2">🔒 100% ओरिजिनल एवं सुरक्षित काम</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">हमारी प्रमुख ऑनलाइन सेवाएं</h2>
+                <div class="h-1 w-20 bg-blue-900 mx-auto mt-3 rounded"></div>
+                <p class="text-gray-600 mt-4">हम बिना किसी परेशानी के आपके सरकारी और गैर-सरकारी फॉर्म्स harvests और डॉक्यूमेंटेशन का कार्य कुशलता से पूरा करते हैं।</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Aay Praman Patra -->
+                <div class="service-card bg-gray-50 border border-gray-100 rounded-xl p-6 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center text-blue-900 text-2xl mb-4">📝</div>
+                        <h3 class="text-xl font-bold text-gray-900">आय प्रमाण पत्र (Income Certificate)</h3>
+                        <p class="text-gray-600 mt-2 text-sm">स्कॉलरशिप, सरकारी सब्सिडी या नौकरी के लिए नया आय प्रमाण पत्र ऑनलाइन बनवाएं।</p>
+                    </div>
+                    <button onclick="openModal('आय प्रमाण पत्र (Income Certificate)')" class="mt-6 text-sm font-semibold text-blue-900 hover:text-blue-700 flex items-center gap-1 focus:outline-none">अभी अप्लाई करें &rarr;</button>
+                </div>
+
+                <!-- Service 2: Jaati Praman Patra -->
+                <div class="service-card bg-gray-50 border border-gray-100 rounded-xl p-6 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center text-blue-900 text-2xl mb-4">📜</div>
+                        <h3 class="text-xl font-bold text-gray-900">जाति प्रमाण पत्र (Caste Certificate)</h3>
+                        <p class="text-gray-600 mt-2 text-sm">सभी श्रेणियों (OBC, SC, ST, EWS) के लिए digital जाति प्रमाण पत्र का आवेदन।</p>
+                    </div>
+                    <button onclick="openModal('जाति प्रमाण पत्र (Caste Certificate)')" class="mt-6 text-sm font-semibold text-blue-900 hover:text-blue-700 flex items-center gap-1 focus:outline-none">अभी अप्लाई करें &rarr;</button>
+                </div>
+
+                <!-- Service 3: Niwas Praman Patra -->
+                <div class="service-card bg-gray-50 border border-gray-100 rounded-xl p-6 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center text-blue-900 text-2xl mb-4">🏠</div>
+                        <h3 class="text-xl font-bold text-gray-900">निवास प्रमाण पत्र (Domicile Certificate)</h3>
+                        <p class="text-gray-600 mt-2 text-sm">स्थानीय निवासी या मूल निवास होने का डिजिटल प्रमाण पत्र प्राप्त करें।</p>
+                    </div>
+                    <button onclick="openModal('निवास प्रमाण पत्र (Domicile Certificate)')" class="mt-6 text-sm font-semibold text-blue-900 hover:text-blue-700 flex items-center gap-1 focus:outline-none">अभी अप्लाई करें &rarr;</button>
+                </div>
+
+                <!-- Service 4: Passport Services -->
